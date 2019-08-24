@@ -1,5 +1,5 @@
 import ui
-import storage
+# import storage
 
 
 def initialize_calendar():
@@ -9,9 +9,12 @@ def initialize_calendar():
 
 def schedule_meeting_in(calendar):
     meeting_title = ui.get_user_input('Enter meeting title', str)
-    duration = ui.get_user_input('Enter duration in hours (1 or 2)', int)
-    start_time = ui.get_user_input('Enter start time', int)
-    calendar[start_time] = meeting_title
+    duration = ui.get_user_input('Enter duration in hours (1 or 2)', int, 'duration')
+    start_time = ui.get_user_input('Enter start time', int, 'start_time')
+
+    print(duration, start_time, meeting_title)
+
+    # calendar[start_time] = meeting_title
 
 
 def main():
